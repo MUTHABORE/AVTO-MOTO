@@ -1,0 +1,27 @@
+header {
+	background-color: #F5F5F9;
+}
+
+.header-menu {
+	display: flex;
+	width: 1180px;
+	margin: 0 auto;
+}
+
+.header-menu__logo {
+	display: flex;
+	margin-left: 5px;
+}
+
+.header-menu__title {
+	margin-left: 20px;
+
+	font-family: "Open Sans";
+	font-size: 18px;
+	text-decoration: none;
+	color: #48494D;
+
+	& p {
+		margin: 0;
+	}
+}
