@@ -1,37 +1,35 @@
 import React from 'react';
 import logoPicture from './images/logo.svg';
+import sliderImage from './images/slide_1.jpg';
+import sliderMiniImage from './images/slide_1.jpg';
 
 const App = (props) => {
 	return (
 		<React.Fragment>
-			<header>
+			<header className="header">
 				<div className="header-menu">
-					<a className="header-menu__logo" href="#">
+					<a className="header-menu__logo">
 						<img src={logoPicture} alt="Логотип АВТО-МОТО"/>
-						<h2 className="header-menu__title">
-							<p>AVTO</p>
-							<small>MOTO</small>
-						</h2>
 					</a>
 					<nav className="navigation">
-						<ul className="navigation-list">
-							<li className="navigation-list__item">
-								<a href="#">
+						<ul className="navigation__list navigation__list--header">
+							<li className="navigation__item">
+								<a className="navigation__link" href="#">
 									Автомобили
 								</a>
 							</li>
-							<li className="navigation-list__item">
-								<a href="#">
+							<li className="navigation__item">
+								<a className="navigation__link" href="#">
 									Контакты
 								</a>
 							</li>
-							<li className="navigation-list__item">
-								<a href="#">
+							<li className="navigation__item">
+								<a className="navigation__link" href="#">
 									Услуги
 								</a>
 							</li>
-							<li className="navigation-list__item">
-								<a href="#">
+							<li className="navigation__item">
+								<a className="navigation__link" href="#">
 									Вакансии
 								</a>
 							</li>
@@ -42,101 +40,118 @@ const App = (props) => {
 
 			<main>
 				<section className="vehicle-card">
-					<div className="vehical-main">
-						<div className="vehical-slider"></div>
-						<div className="vehical-card__info">
-							<h3 className="vehical-card__title">Марпех 11</h3>
-							<ul className="vehical-card__specifications">
-								<li>Бензин</li>
-								<li>Механика</li>
-								<li>100 л.с.</li>
-								<li>1.4 л.</li>
-							</ul>
-							<div className="vehical-card__price">
-								<p>2 300 000 ₽</p>
-								<p>2 400 000 ₽</p>
+					<div className="vehicle-main">
+						<div className="slider">
+							<div className="slider__main-slide">
+								{/* <span>new model</span> */}
+								<img className="slider__main-img" src={sliderImage} alt="Фото автомашины Вашей мечты"/>
 							</div>
-							<a href="#">оставить заявку</a>
-							<a href="#">В КРЕДИТ ОТ 11 000 ₽</a>
+							<div className="slider__controls">
+								<button className="slider__arrow slider__arrow--before"></button>
+								<ul className="slider__images-list">
+									<li className="slider__images-list-item">
+										<img className="slider__mini-img" src={sliderMiniImage} alt="Маленькое фото автомашины Вашей мечты"/>
+									</li>
+									<li className="slider__images-list-item">
+										<img className="slider__mini-img" src={sliderMiniImage} alt="Маленькое фото автомашины Вашей мечты"/>
+									</li>
+									<li className="slider__images-list-item">
+										<img className="slider__mini-img" src={sliderMiniImage} alt="Маленькое фото автомашины Вашей мечты"/>
+									</li>
+								</ul>
+								<button className="slider__arrow slider__arrow--after"></button>
+							</div>
+						</div>
+						<div className="vehicle-card__info">
+							<h3 className="vehicle-card__title">Марпех 11</h3>
+							<ul className="vehicle-card__specifications">
+								<li className="vehicle-card__specifications-item">бензин</li>
+								<li className="vehicle-card__specifications-item">механика</li>
+								<li className="vehicle-card__specifications-item">100 л.с.</li>
+								<li className="vehicle-card__specifications-item">1.4 л.</li>
+							</ul>
+							<div className="vehicle-card__price">
+								<p className="vehicle-card__discount-price">2 300 000 ₽</p>
+								<p className="vehicle-card__full-price">2&nbsp; 400 000 ₽</p>
+							</div>
+							<a className="vehicle-card__request-button" href="#">оставить заявку</a>
+							<a className="vehicle-card__credit-button" href="#">В КРЕДИТ ОТ 11 000 ₽</a>
 						</div>
 					</div>
-					<div className="vehicle-description">
-						<table>
-							<tr>
-								<th>Характеристики</th>
-								<th>Отзывы</th>
-								<th>Контакты</th>
-							</tr>
-						</table>
-						<table className="vehicle-description__specifications">
-							<tr>
+					<div className="tabs">
+						<ul className="tabs__list">
+							<li className="tabs__item">Характеристики</li>
+							<li className="tabs__item">Отзывы</li>
+							<li className="tabs__item">Контакты</li>
+						</ul>
+						<table className="specifications">
+							<tr className="specifications__row">
 								<td>Трансмиссия</td>
 								<td>Роботизированная</td>
 							</tr>
-							<tr>
+							<tr className="specifications__row">
 								<td>Мощность двигателя, л.с.</td>
 								<td>249</td>
 							</tr>
-							<tr>
+							<tr className="specifications__row">
 								<td>Тип двигателя</td>
 								<td>Бензиновый</td>
 							</tr>
-							<tr>
+							<tr className="specifications__row">
 								<td>Привод</td>
 								<td>Полный</td>
 							</tr>
-							<tr>
+							<tr className="specifications__row">
 								<td>Объем двигателя, л</td>
 								<td>2.4</td>
 							</tr>
-							<tr>
+							<tr className="specifications__row">
 								<td>Макс. крутящий момент</td>
 								<td>370/4500</td>
 							</tr>
-							<tr>
+							<tr className="specifications__row">
 								<td>Количество цилиндров</td>
 								<td>4</td>
 							</tr>
 						</table>
-						<div className="reviews">
-
+						{/* <div className="reviews">
 							<a href="#">оставить отзыв</a>
-						<ul className="reviews__list">
-							<li>
-								<p className="reviews__name">Борис Иванов</p>
-								<div className="reviews__resume">
-									<div className="reviews__dignity">
-										<p>Достоинства</p>
-										<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis impedit perferendis dicta. Et atque ex perferendis deleniti ipsa quibusdam laboriosam doloribus! Distinctio deleniti dolore iure expedita sequi praesentium commodi eum!</p>
-									</div>
-									<div className="reviews__limitations">
-										<p>Недостатки</p>
-										<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum possimus fuga esse modi laboriosam in culpa accusamus facere iure porro delectus, perferendis aut fugiat dicta tempora impedit repellat minima veritatis!</p>
-									</div>
-									<div className="reviews__comment">
-										<p>Комментарий</p>
-										<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia, sequi odio officiis suscipit eligendi aperiam corporis ea aliquam assumenda quae alias eaque accusamus dignissimos! Sint nam tempora beatae sapiente accusamus.</p>
-									</div>
-									<div className="reviews__rating">
-										<div>
-											<input type="radio" name="rating" value="1" />
-											<input type="radio" name="rating" value="2" />
-											<input type="radio" name="rating" value="3" />
-											<input type="radio" name="rating" value="4" />
-											<input type="radio" name="rating" value="5" />
+							<ul className="reviews__list">
+								<li>
+									<p className="reviews__name">Борис Иванов</p>
+									<div className="reviews__resume">
+										<div className="reviews__dignity">
+											<p>Достоинства</p>
+											<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis impedit perferendis dicta. Et atque ex perferendis deleniti ipsa quibusdam laboriosam doloribus! Distinctio deleniti dolore iure expedita sequi praesentium commodi eum!</p>
 										</div>
-										<p className="reviews__rating-text">Советует</p>
+										<div className="reviews__limitations">
+											<p>Недостатки</p>
+											<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum possimus fuga esse modi laboriosam in culpa accusamus facere iure porro delectus, perferendis aut fugiat dicta tempora impedit repellat minima veritatis!</p>
+										</div>
+										<div className="reviews__comment">
+											<p>Комментарий</p>
+											<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia, sequi odio officiis suscipit eligendi aperiam corporis ea aliquam assumenda quae alias eaque accusamus dignissimos! Sint nam tempora beatae sapiente accusamus.</p>
+										</div>
+										<div className="reviews__rating">
+											<div>
+												<input type="radio" name="rating" value="1" />
+												<input type="radio" name="rating" value="2" />
+												<input type="radio" name="rating" value="3" />
+												<input type="radio" name="rating" value="4" />
+												<input type="radio" name="rating" value="5" />
+											</div>
+											<p className="reviews__rating-text">Советует</p>
+										</div>
+										<div className="reviews__options">
+											<p>1 минуту назад</p>
+											<a href="#">Ответить</a>
+										</div>
 									</div>
-									<div className="reviews__options">
-										<p>1 минуту назад</p>
-										<a href="#">Ответить</a>
-									</div>
-								</div>
-							</li>
-						</ul>
-						</div>
+								</li>
+							</ul>
+						</div> */}
 					</div>
-					<form action="#" className="add-review">
+					{/* <form action="#" className="add-review">
 						<button className="add-review__close-button"></button>
 						<h3 className="add-review__title">Оставить отзыв</h3>
 						<input type="text" placeholder="Имя" required/>
@@ -154,50 +169,51 @@ const App = (props) => {
 						</div>
 						<textarea name="add-review__comment" placeholder="Комментарий" required></textarea>
 						<button className="add-review__submit">оставить отзыв</button>
-					</form>
+					</form> */}
 				</section>
 			</main>
 
-			<footer>
+			<footer className="footer">
 				<nav className="navigation">
-					<ul className="navigation-list">
-						<li>
-							<a href="#">
+					<ul className="navigation__list navigation__list--footer">
+						<li className="navigation__item">
+							<a className="navigation__link navigation__link--footer" href="#">
 								Корпоративным клиентам
 							</a>
 						</li>
-						<li>
-							<a href="#">
+						<li className="navigation__item">
+							<a className="navigation__link navigation__link--footer" href="#">
 								Клиентам
 							</a>
 						</li>
-						<li>
-							<a href="#">
+						<li className="navigation__item">
+							<a className="navigation__link navigation__link--footer" href="#">
 								Аренда авто
 							</a>
 						</li>
-						<li>
-							<a href="#">
+						<li className="navigation__item">
+							<a className="navigation__link navigation__link--footer" href="#">
 								Каршеринг
 							</a>
 						</li>
-						<li>
-							<a href="#">
+						<li className="navigation__item">
+							<a className="navigation__link navigation__link--footer" href="#">
 								Как продать авто
 							</a>
 						</li>
-						<li>
-							<a href="#">
+						<li className="navigation__item">
+							<a className="navigation__link navigation__link--footer" href="#">
 								Traid-in
 							</a>
 						</li>
-						<li>
-							<a href="#">
-								Test drive
+						<li className="navigation__item">
+							<a className="navigation__link navigation__link--footer" href="#">
+								Test draiv
 							</a>
 						</li>
 					</ul>
 				</nav>
+
 			</footer>
 		</React.Fragment>
 	);

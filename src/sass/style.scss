@@ -1,4 +1,10 @@
 @import "normalize.css";
+@import "./blocks/global.scss";
 @import "fonts.scss";
 @import "./blocks/header.scss";
+@import "./blocks/footer.scss";
 @import "./blocks/navigation.scss";
+@import "./blocks/vehicle-card.scss";
+@import "./blocks/slider.scss";
+@import "./blocks/tabs.scss";
+@import "./blocks/specifications.scss";

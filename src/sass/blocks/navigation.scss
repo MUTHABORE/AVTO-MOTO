@@ -3,18 +3,33 @@
   margin-left: auto;
 }
 
-.navigation-list {
+.navigation__list {
   display: flex;
-  padding: 0;
+  padding: 0 20px;
   margin: 0;
+  list-style: none;
+
+  &--header {
+    margin-right: -48px;
+  }
 }
 
-.navigation-list__item {
-  list-style-type: none;
+.navigation__list--footer {
+	margin: 0 auto;
+	box-sizing: border-box;
+}
+
+.navigation__link {
+  display: block;
   
-  & a {
-    text-decoration: none;
-    line-height: 84px;
+  line-height: 84px;
+  padding: 0 34px;
+  font-weight: 600;
+  font-size: 16px;
+  color: #48494D;
+
+  &--footer {
+    padding: 0 33px;
   }
 }
 
