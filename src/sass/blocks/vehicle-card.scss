@@ -58,8 +58,23 @@
     height: 40px;
     top: calc(50% - 31px);
     left: calc(50% - 23px);
+  }
 
+  &--engine-type::after {
+    left: calc(50% - 30px);
+    background-image: url("../../images/engine_type.svg");
+  }
+
+  &--horsepower::after {
+    background-image: url("../../images/horsepower.svg");
+  }
+
+  &--gearbox::after {
     background-image: url("../../images/gearbox.svg");
+  }
+
+  &--engine-volume::after {
+    background-image: url("../../images/engine_volume.svg");
   }
 }
 
@@ -78,6 +93,7 @@
 }
 
 .vehicle-card__full-price {
+  position: relative;
   margin-left: 35px;
   margin-top: 47px;
 
@@ -85,6 +101,20 @@
   font-size: 20px;
   line-height: 27px;
   color: rgba(72, 73, 77, 0.5);
+
+  &::after {
+    position: absolute;
+    content: "";
+		display: block;
+
+    width: 123.5px;
+    height: 1px;
+    top: 12px;
+    left: -4px;
+
+    background-color: #A3A4A6;
+    transform: rotate(-5deg);
+  }
 }
 
 .vehicle-card__request-button {
