@@ -74,4 +74,8 @@
 
     transform: rotate(180deg);
   }
+
+  &--disabled::after {
+    background-image: url("../../images/arrow-disabled.svg");
+  }
 }

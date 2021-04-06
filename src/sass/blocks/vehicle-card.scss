@@ -132,6 +132,11 @@
   color: #FFFFFF;
 
   background: #D12136;
+
+  &:hover {
+    background: #BD0C21;
+  }
+
 }
 
 .vehicle-card__credit-button {
@@ -149,4 +154,9 @@
 
   border: 1px solid #D12136;
   box-sizing: border-box;
+
+  &:hover {
+    color: #fff;
+    background: #D12136;
+  }
 }
