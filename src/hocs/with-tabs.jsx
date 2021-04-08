@@ -1,4 +1,6 @@
-import React , {PureComponent} from 'react';
+import React, {PureComponent} from 'react';
+
+import {extend} from '../utils/utils';
 
 export const withTabs = (Component) => {
   class WithTabs extends PureComponent {
@@ -16,7 +18,7 @@ export const withTabs = (Component) => {
       if (this.state.currentTab === tab) {
         return;
       };
-      this.setState(Object.assign({}, this.state, {currentTab: tab}));
+      this.setState(extend(this.state, {currentTab: tab}));
     }
 
     render() {

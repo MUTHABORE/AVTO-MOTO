@@ -84,6 +84,31 @@
   box-sizing: border-box;
 }
 
+.popup__required-field--invalid {
+  border: 1px solid #FF0000;
+
+  &:focus {
+      outline: 0;
+  }
+}
+
+.popup__required-field-wrapper {
+  position: relative;
+  
+  &::before {
+    position: absolute;
+    content: "Пожалуйста, заполните поле";
+    display: block;
+
+    top: -25px;
+    left: 0;
+    
+    font-size: 14px;
+    line-height: 19px;
+    color: #FF0000;
+  }
+}
+
 .popup__rating {
   display: flex;
 }

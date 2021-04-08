@@ -1,11 +1,14 @@
 import React from 'react';
 
+import {withReviews} from '../hocs/with-reviews';
 import Popup from './popup';
 
-const Reviews = () => {
+const Reviews = (props) => {
+  const {onPopupChangeState, isPopupOpen} = props;
+  console.log(props)
   return (
     <div className="reviews">
-      <a className="reviews__add-review-button" href="#">оставить отзыв</a>
+      <a className="reviews__add-review-button" href="#" onClick={onPopupChangeState}>оставить отзыв</a>
       <ul className="reviews__list">
         <li className="reviews__item">
           <p className="reviews__name">Борис Иванов</p>
@@ -70,9 +73,9 @@ const Reviews = () => {
           </div>
         </li>
       </ul>
-      <Popup />
+      <Popup isPopupOpen={isPopupOpen} onPopupChangeState={onPopupChangeState} />
     </div>
   );
 };
 
-export default Reviews;
+export default withReviews(Reviews);
