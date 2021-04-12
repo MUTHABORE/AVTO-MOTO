@@ -4,7 +4,7 @@ import Header from './components/header';
 import VehicleCard from './components/vehicle-card';
 import Footer from './components/footer';
 
-const App = (props) => {
+const App = () => {
 	return (
 		<React.Fragment>
 			<Header/>

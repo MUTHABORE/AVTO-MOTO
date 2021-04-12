@@ -1,8 +1,8 @@
 export const ActionType = {
-  POPUP_STATE_CHANGE: `POPUP_STATE_CHANGE`,
+	ADD_REVIEW: `ADD_REVIEW`,
 }
 
-// export const changePopupStateAction = (currentState) = {
-//   type: ActionType.POPUP_STATE_CHANGE,
-//   payload: currentState,
-// };
+export const addReviewAction = (review) => ({
+	type: ActionType.ADD_REVIEW,
+	payload: review,
+});
