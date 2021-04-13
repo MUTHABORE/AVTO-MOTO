@@ -12,8 +12,10 @@ const reviews = (state = initialState, action) => {
 			return extend(state, {
 				reviews: [...state.reviews, action.payload],
 			});
+		default:
+			return state;
 		}
-	return state;
+	// return state;
 }
 
 export {reviews};
