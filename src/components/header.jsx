@@ -7,7 +7,7 @@ const Header = () => {
 	<header className="header">
 		<div className="header-menu">
 			<a href="#top" className="header-menu__logo">
-				<img src={logoPicture} alt="Логотип АВТО-МОТО"/>
+				<img src={logoPicture} width="134" height="55" alt="Логотип АВТО-МОТО"/>
 			</a>
 			<nav className="navigation">
 				<ul className="navigation__list navigation__list--header">
