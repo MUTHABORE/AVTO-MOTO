@@ -1,10 +1,10 @@
 .header {
 	background-color: #F5F5F9;
+	overflow-x: hidden;
 }
 
 .header-menu {
 	display: flex;
-	min-width: 1024px;
 	max-width: 1220px;
 	margin: 0 auto;
   padding: 0 20px;
@@ -15,5 +15,6 @@
 
 .header-menu__logo {
 	margin-left: 6px;
+	margin-right: 40px;
 	margin-top: 15px;
 }

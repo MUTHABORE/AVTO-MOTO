@@ -36,18 +36,18 @@ export const withPopup = (Component) => {
 		_validatingFields(name, value, elem) {
 			if (name === `name` && value === ``) {
 				elem.classList.add(`popup__required-field--invalid`);
-				elem.parentNode.classList.add(`popup__required-field-wrapper`);
+				elem.parentNode.classList.add(`popup__required-field-wrapper--invalid`);
 				return;
 			}
 
 			if (name === `comment` && value === ``) {
 				elem.classList.add(`popup__required-field--invalid`);
-				elem.parentNode.classList.add(`popup__required-field-wrapper`);
+				elem.parentNode.classList.add(`popup__required-field-wrapper--invalid`);
 				return;
 			}
 
 			elem.classList.remove(`popup__required-field--invalid`);
-			elem.parentNode.classList.remove(`popup__required-field-wrapper`);
+			elem.parentNode.classList.remove(`popup__required-field-wrapper--invalid`);
 		}
 
 		onClosePopupKeydown(evt) {
@@ -58,10 +58,12 @@ export const withPopup = (Component) => {
 
 		componentDidMount() {
 			document.addEventListener(`keydown`, this.onClosePopupKeydown);
+			document.documentElement.style.overflow = `hidden`;
 		}
-
+		
 		componentWillUnmount() {
 			document.removeEventListener(`keydown`, this.onClosePopupKeydown);
+			document.documentElement.style.overflow = `auto`;
 		}
 
 		onSubmit(evt) {
@@ -74,11 +76,11 @@ export const withPopup = (Component) => {
 			reqiredFields.forEach((field) => {
 				if (field.value === ``) {
 					field.classList.add(`popup__required-field--invalid`);
-					field.parentNode.classList.add(`popup__required-field-wrapper`);
+					field.parentNode.classList.add(`popup__required-field-wrapper--invalid`);
 					validationStatus = false;
 				} else {
 					field.classList.remove(`popup__required-field--invalid`);
-					field.parentNode.classList.remove(`popup__required-field-wrapper`);
+					field.parentNode.classList.remove(`popup__required-field-wrapper--invalid`);
 					validationStatus = true;
 				}
 			})

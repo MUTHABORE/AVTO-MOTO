@@ -12,7 +12,7 @@ const Popup = (props) => {
 				<button className="popup__close-button" type="button" onClick={onPopupChangeState}></button>
 				<h3 className="popup__title">Оставить отзыв</h3>
 				<div className="popup__fields">
-					<div>
+					<div className="popup__required-field-wrapper">
 						<input className="popup__input popup__required-field" onChange={onReviewChange} name="name" type="text" placeholder="Имя" autoFocus/>
 					</div>
 					<input className="popup__input" onChange={onReviewChange} name="dignity" type="text" placeholder="Достоинства"/>
@@ -48,7 +48,7 @@ const Popup = (props) => {
 
 						</div>
 					</div>
-					<div>
+					<div className="popup__required-field-wrapper">
 						<textarea className="popup__input popup__input--comment popup__required-field" onChange={onReviewChange}name="comment" placeholder="Комментарий"></textarea>
 					</div>
 				</div>

@@ -1,5 +1,4 @@
 .vehicle-card {
-	min-width: 1024px;
 	max-width: 1220px;
 	margin: 0 auto;
 	margin-top: 74px;
@@ -10,7 +9,6 @@
 
 .vehicle-main {
 	display: flex;
-	flex-wrap: wrap;
 	margin-bottom: 84px;
 }
 
@@ -80,26 +78,28 @@
 
 .vehicle-card__price {
 	display: flex;
-	margin-left: 3px;
-	margin-bottom: 2px;
+	padding-left: 3px;
+	margin: 40px 0;
+	flex-wrap: wrap;
 }
 
 .vehicle-card__discount-price {
+	margin: 0;
 	font-weight: 700;
 	font-size: 35px;
-	line-height: 48px;
-
+	line-height: 42px;
 	color: #48494D;
 }
 
 .vehicle-card__full-price {
 	position: relative;
+	margin: 0;
 	margin-left: 35px;
-	margin-top: 47px;
+	padding-top: 3px;
 
 	font-weight: 400;
 	font-size: 20px;
-	line-height: 27px;
+	line-height: 39px;
 	color: rgba(72, 73, 77, 0.5);
 
 	&::after {
@@ -109,8 +109,8 @@
 
 		width: 123.5px;
 		height: 1px;
-		top: 12px;
-		left: -4px;
+		top: 21px;
+    left: -2px;
 
 		background-color: #A3A4A6;
 		transform: rotate(-5deg);
@@ -129,7 +129,7 @@
 	text-align: center;
 	letter-spacing: 0.12em;
 	text-transform: uppercase;
-	color: #FFFFFF;
+	color: #FFF;
 
 	background: #D12136;
 

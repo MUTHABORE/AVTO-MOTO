@@ -10,6 +10,7 @@
 	background-color: rgba(88, 87, 87, 0.6);
 	align-items: center;
 	justify-content: center;
+	overflow: hidden;
 	z-index: 10;
 }
 
@@ -97,19 +98,6 @@
 
 .popup__required-field-wrapper {
 	position: relative;
-	
-	&::before {
-		position: absolute;
-		content: "Пожалуйста, заполните поле";
-		display: block;
-
-		top: -23px;
-		left: 0;
-		
-		font-size: 14px;
-		line-height: 19px;
-		color: #FF0000;
-	}
 
 	&::after {
 		position: absolute;
@@ -124,6 +112,19 @@
 		
 		color: #D12136;
 	}
+}
+
+.popup__required-field-wrapper--invalid::before {
+	position: absolute;
+	content: "Пожалуйста, заполните поле";
+	display: block;
+
+	top: -23px;
+	left: 0;
+	
+	font-size: 14px;
+	line-height: 19px;
+	color: #FF0000;
 }
 
 .popup__rating {

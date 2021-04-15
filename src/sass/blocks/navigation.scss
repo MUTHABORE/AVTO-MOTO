@@ -1,31 +1,25 @@
-.navigation {
-	display: flex;
-}
-
 .navigation__list {
 	display: flex;
 	padding: 0 20px;
 	margin: 0;
 	list-style: none;
-
+	
 	flex-wrap: wrap;
-
+	
 	&--header {
 		margin-right: -15px;
 	}
-
+	
 	&--footer {
 		padding: 0 25px 0 29px;
-		min-width: 1024px;
-		max-width: 1220px;
 		margin: 0 auto;
-		flex-grow: 1;
+		max-width: 1220px;
 		box-sizing: border-box;
+		justify-content: space-around;
 	}
 }
 
 .navigation__item {
-	flex-grow: 1;
 	text-align: center;
 
 	&:first-child {
@@ -45,10 +39,9 @@
 	font-weight: 600;
 	font-size: 16px;
 	color: #48494D;
-
+	
 	&--footer {
-		width: 100%;
-		padding: 0;
+		padding: 0 18px;
 	}
 
 	&:hover {

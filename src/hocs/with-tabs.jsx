@@ -12,6 +12,16 @@ export const withTabs = (Component) => {
 			}
 
 			this.onTabChange = this.onTabChange.bind(this);
+			this.onTabKeydownChange = this.onTabKeydownChange.bind(this);
+		}
+
+		onTabKeydownChange(evt, tab) {
+			if (evt.key === 'Enter') {
+				if (this.state.currentTab === tab) {
+					return;
+				};
+				this.setState(extend(this.state, {currentTab: tab}));
+			}
 		}
 
 		onTabChange(tab) {
@@ -26,6 +36,7 @@ export const withTabs = (Component) => {
 				<Component
 					currentTab={this.state.currentTab}
 					onTabChange={this.onTabChange}
+					onTabKeydownChange={this.onTabKeydownChange}
 				/>
 			);
 		}

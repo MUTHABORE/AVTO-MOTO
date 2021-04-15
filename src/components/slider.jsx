@@ -14,7 +14,7 @@ const Slider = (props) => {
 				<img className="slider__main-img" src={Slides[mainSlide]} alt="Фото автомашины Вашей мечты"/>
 			</div>
 			<div className="slider__controls">
-				<button className={`slider__arrow slider__arrow--before ${mainSlide === 0 ? "slider__arrow--disabled" : ""}`} onClick={onPreviousSlide} disabled={mainSlide === 0 ? "disabled" : ""}></button>
+				<button className={`slider__arrow slider__arrow--before ${mainSlide === 0 ? "slider__arrow--disabled" : ""}`} onClick={onPreviousSlide} disabled={mainSlide === 0 ? "disabled" : ""} aria-label="Показать предыдущий слайд"></button>
 				<ul className="slider__images-list">
 					{Slides.map(function(slide, i) {
 						return (
@@ -24,7 +24,7 @@ const Slider = (props) => {
 						);
 					})}
 				</ul>
-				<button className={`slider__arrow slider__arrow--after ${SLIDES_AMOUNT === mainSlide ? "slider__arrow--disabled" : ""}`} onClick={onNextSlide} disabled={SLIDES_AMOUNT === mainSlide ? "disabled" : ""}></button>
+				<button className={`slider__arrow slider__arrow--after ${SLIDES_AMOUNT === mainSlide ? "slider__arrow--disabled" : ""}`} onClick={onNextSlide} disabled={SLIDES_AMOUNT === mainSlide ? "disabled" : ""} aria-label="Показать следующий слайд"></button>
 			</div>
 		</div>
 	);
